@@ -1,0 +1,14 @@
+[Unit]
+Description=file
+After=network.target
+
+[Service]
+ExecStart=/usr/local/bin/filebrowser -r /home/ubuntu -p 5353
+WorkingDirectory=/home/ubuntu/Downloads
+Restart=always
+User=ubuntu
+Group=ubuntu
+
+[Install]
+WantedBy=multi-user.target
+
